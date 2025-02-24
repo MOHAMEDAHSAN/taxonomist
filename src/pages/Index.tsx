@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import { ArrowRight, Brain, ChartBarIcon, Shield, Linkedin } from "lucide-react";
@@ -21,7 +22,7 @@ const Index = () => {
         scale: 1.00,
         scaleMobile: 1.00,
         color: 0x89964e,
-        backgroundColor: 0x222222
+        backgroundColor: 0xffffff
       });
     }
 
@@ -33,7 +34,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#222222] font-['Poppins']">
+    <div className="min-h-screen bg-white font-['Poppins']">
       <Navbar />
       
       {/* Hero Section */}
@@ -46,22 +47,22 @@ const Index = () => {
             transition={{ duration: 0.6 }}
             className="container mx-auto text-center"
           >
-            <div className="inline-block mb-4 px-4 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-white">
-              <span className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent tracking-wider">
+            <div className="inline-block mb-4 px-4 py-1 bg-[#89964e]/10 backdrop-blur-sm rounded-full text-sm font-medium">
+              <span className="text-2xl font-bold bg-gradient-to-r from-[#89964e] to-[#89964e]/70 bg-clip-text text-transparent tracking-wider">
                 Taxonomist
               </span>
             </div>
-            <h1 className="text-6xl font-bold text-white mb-6 max-w-3xl mx-auto leading-tight font-['Poppins']">
+            <h1 className="text-6xl font-bold text-gray-800 mb-6 max-w-3xl mx-auto leading-tight font-['Poppins']">
               Predict Tax Policy Success with Machine Learning
             </h1>
-            <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto font-light">
+            <p className="text-gray-600 text-xl mb-8 max-w-2xl mx-auto font-light">
               Make informed decisions about tax policies using our advanced ML model. Get instant predictions and comprehensive analysis.
             </p>
             <div className="flex gap-4 justify-center">
               <Button size="lg" className="bg-[#89964e] hover:bg-[#89964e]/90 text-white border-0">
                 Get Started <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button size="lg" variant="outline" className="text-white border-white/20 hover:bg-white/10">
+              <Button size="lg" variant="outline" className="text-gray-700 border-gray-300 hover:bg-gray-50">
                 Learn More
               </Button>
             </div>
@@ -70,14 +71,14 @@ const Index = () => {
       </div>
 
       {/* Features Section */}
-      <section id="features" className="py-20 bg-black/50">
+      <section id="features" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.6 }}
-            className="text-3xl font-bold text-white text-center mb-12"
+            className="text-3xl font-bold text-gray-800 text-center mb-12"
           >
             Key Features
           </motion.h2>
@@ -105,11 +106,11 @@ const Index = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="bg-white/5 backdrop-blur-sm p-8 rounded-lg border border-white/10 hover:border-white/20 transition-all"
+                className="bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all"
               >
                 {feature.icon}
-                <h3 className="text-xl font-semibold mb-2 text-white">{feature.title}</h3>
-                <p className="text-gray-400">{feature.description}</p>
+                <h3 className="text-xl font-semibold mb-2 text-gray-800">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -117,14 +118,14 @@ const Index = () => {
       </section>
 
       {/* Team Section */}
-      <section id="team" className="py-20 bg-black/30">
+      <section id="team" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.6 }}
-            className="text-3xl font-bold text-white text-center mb-12"
+            className="text-3xl font-bold text-gray-800 text-center mb-12"
           >
             Meet Our Team
           </motion.h2>
@@ -133,19 +134,19 @@ const Index = () => {
               {
                 name: "Abishai KC",
                 role: "ML Engineer",
-                image: "https://api.dicebear.com/7.x/initials/svg?seed=AK&backgroundColor=2D3648&textColor=ffffff",
+                image: "https://api.dicebear.com/7.x/initials/svg?seed=AK&backgroundColor=89964e&textColor=ffffff",
                 linkedin: "https://www.linkedin.com/in/abishai-k-c-6a5288271/"
               },
               {
                 name: "Mohamed Ahsan",
                 role: "Data Scientist",
-                image: "https://api.dicebear.com/7.x/initials/svg?seed=MA&backgroundColor=2D3648&textColor=ffffff",
+                image: "https://api.dicebear.com/7.x/initials/svg?seed=MA&backgroundColor=89964e&textColor=ffffff",
                 linkedin: "https://www.linkedin.com/in/mohamedahsan037/"
               },
               {
                 name: "Jai Surya",
                 role: "UX/UI Designer",
-                image: "https://api.dicebear.com/7.x/initials/svg?seed=JS&backgroundColor=2D3648&textColor=ffffff",
+                image: "https://api.dicebear.com/7.x/initials/svg?seed=JS&backgroundColor=89964e&textColor=ffffff",
                 linkedin: "https://www.linkedin.com/in/jai-surya-1801abc/"
               }
             ].map((member, index) => (
@@ -155,18 +156,18 @@ const Index = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="bg-white/5 backdrop-blur-sm p-8 rounded-lg border border-white/10 hover:border-white/20 transition-all"
+                className="bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all"
               >
                 <img 
                   src={member.image} 
                   alt={member.name} 
-                  className="w-32 h-32 rounded-full mx-auto mb-6 filter grayscale hover:grayscale-0 transition-all duration-300" 
+                  className="w-32 h-32 rounded-full mx-auto mb-6" 
                 />
-                <h3 className="text-xl font-semibold mb-2 text-white">{member.name}</h3>
-                <p className="text-gray-400 mb-6">{member.role}</p>
+                <h3 className="text-xl font-semibold mb-2 text-gray-800">{member.name}</h3>
+                <p className="text-gray-600 mb-6">{member.role}</p>
                 <Button 
                   variant="outline" 
-                  className="w-full border-white/10 hover:bg-white/10 text-white transition-colors"
+                  className="w-full border-gray-200 hover:bg-gray-50 text-gray-700"
                   onClick={() => window.open(member.linkedin, '_blank')}
                 >
                   <Linkedin className="mr-2 h-4 w-4" />
