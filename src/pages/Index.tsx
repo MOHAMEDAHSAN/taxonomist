@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import { ArrowRight, Brain, ChartBarIcon, Shield, Linkedin } from "lucide-react";
@@ -22,7 +21,7 @@ const Index = () => {
         scale: 1.00,
         scaleMobile: 1.00,
         color: 0x89964e,
-        backgroundColor: 0x2222
+        backgroundColor: 0x222222
       });
     }
 
@@ -34,7 +33,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#222222]">
+    <div className="min-h-screen bg-[#222222] font-['Poppins']">
       <Navbar />
       
       {/* Hero Section */}
@@ -48,12 +47,14 @@ const Index = () => {
             className="container mx-auto text-center"
           >
             <div className="inline-block mb-4 px-4 py-1 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-white">
-              Introducing Taxonomist
+              <span className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent tracking-wider">
+                Taxonomist
+              </span>
             </div>
-            <h1 className="text-6xl font-bold text-white mb-6 max-w-3xl mx-auto leading-tight">
+            <h1 className="text-6xl font-bold text-white mb-6 max-w-3xl mx-auto leading-tight font-['Poppins']">
               Predict Tax Policy Success with Machine Learning
             </h1>
-            <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto font-light">
               Make informed decisions about tax policies using our advanced ML model. Get instant predictions and comprehensive analysis.
             </p>
             <div className="flex gap-4 justify-center">
