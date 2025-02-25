@@ -22,10 +22,16 @@ const Index = () => {
         scale: 1.00,
         scaleMobile: 1.00,
         color: 0x89964e,
-        backgroundColor: 0xffffff
+        backgroundColor: 0xffffff,
+        points: 12,
+        maxDistance: 20,
+        spacing: 15,
+        showDots: false,
+        falloff: 0.75
       });
     }
 
+    // Cleanup function
     return () => {
       if (vantaEffect.current) {
         vantaEffect.current.destroy();
