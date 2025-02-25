@@ -1,10 +1,13 @@
+
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import { ArrowRight, Brain, ChartBarIcon, Shield, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
   const vantaRef = useRef<HTMLDivElement>(null);
   const vantaEffect = useRef<any>(null);
 
@@ -58,7 +61,11 @@ const Index = () => {
               Make informed decisions about tax policies using our advanced ML model. Get instant predictions and comprehensive analysis.
             </p>
             <div className="flex gap-4 justify-center">
-              <Button size="lg" className="bg-[#89964e] hover:bg-[#89964e]/90 text-white border-0">
+              <Button 
+                size="lg" 
+                className="bg-[#89964e] hover:bg-[#89964e]/90 text-white border-0"
+                onClick={() => navigate('/gdp-calculator')}
+              >
                 Get Started <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <Button size="lg" variant="outline" className="text-gray-700 border-gray-300 hover:bg-gray-50">
