@@ -10,6 +10,11 @@ https://taxonomist.vercel.app/
 
 ---
 
+## Google Colab (Model Link)
+https://colab.research.google.com/drive/1VM9ilhSLTPNncNurxLD6CSqtQpC0gjN7?usp=sharing
+
+---
+
 ## 📌 Features  
 - **Tax Policy Simulation** – Predict the economic impact of tax changes.  
 - **GDP Calculator** – Estimate GDP based on economic indicators.  
