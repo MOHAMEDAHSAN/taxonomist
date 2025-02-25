@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import { ArrowRight, Brain, ChartBarIcon, Shield, Linkedin } from "lucide-react";
@@ -33,44 +34,42 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white font-['Poppins']">
+    <div ref={vantaRef} className="min-h-screen bg-white font-['Poppins']">
       <Navbar />
       
       {/* Hero Section */}
-      <div ref={vantaRef} className="relative min-h-screen">
-        <section className="pt-32 pb-20 px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-            transition={{ duration: 0.6 }}
-            className="container mx-auto text-center"
-          >
-            <div className="inline-block mb-4 px-4 py-1 bg-[#89964e]/10 backdrop-blur-sm rounded-full text-sm font-medium">
-              <span className="text-2xl font-bold bg-gradient-to-r from-[#89964e] to-[#89964e]/70 bg-clip-text text-transparent tracking-wider">
-                Taxonomist
-              </span>
-            </div>
-            <h1 className="text-6xl font-bold text-gray-800 mb-6 max-w-3xl mx-auto leading-tight font-['Poppins']">
-              Predict Tax Policy Success with Machine Learning
-            </h1>
-            <p className="text-gray-600 text-xl mb-8 max-w-2xl mx-auto font-light">
-              Make informed decisions about tax policies using our advanced ML model. Get instant predictions and comprehensive analysis.
-            </p>
-            <div className="flex gap-4 justify-center">
-              <Button size="lg" className="bg-[#89964e] hover:bg-[#89964e]/90 text-white border-0">
-                Get Started <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button size="lg" variant="outline" className="text-gray-700 border-gray-300 hover:bg-gray-50">
-                Learn More
-              </Button>
-            </div>
-          </motion.div>
-        </section>
-      </div>
+      <section className="pt-32 pb-20 px-4">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.6 }}
+          className="container mx-auto text-center"
+        >
+          <div className="inline-block mb-4 px-4 py-1 bg-[#89964e]/10 backdrop-blur-sm rounded-full text-sm font-medium">
+            <span className="text-2xl font-bold bg-gradient-to-r from-[#89964e] to-[#89964e]/70 bg-clip-text text-transparent tracking-wider">
+              Taxonomist
+            </span>
+          </div>
+          <h1 className="text-6xl font-bold text-gray-800 mb-6 max-w-3xl mx-auto leading-tight font-['Poppins']">
+            Predict Tax Policy Success with Machine Learning
+          </h1>
+          <p className="text-gray-600 text-xl mb-8 max-w-2xl mx-auto font-light">
+            Make informed decisions about tax policies using our advanced ML model. Get instant predictions and comprehensive analysis.
+          </p>
+          <div className="flex gap-4 justify-center">
+            <Button size="lg" className="bg-[#89964e] hover:bg-[#89964e]/90 text-white border-0">
+              Get Started <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+            <Button size="lg" variant="outline" className="text-gray-700 border-gray-300 hover:bg-gray-50">
+              Learn More
+            </Button>
+          </div>
+        </motion.div>
+      </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 bg-gray-50">
+      <section id="features" className="py-20 bg-transparent">
         <div className="container mx-auto px-4">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -105,7 +104,7 @@ const Index = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all"
+                className="bg-white/80 backdrop-blur-sm p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all"
               >
                 {feature.icon}
                 <h3 className="text-xl font-semibold mb-2 text-gray-800">{feature.title}</h3>
@@ -117,7 +116,7 @@ const Index = () => {
       </section>
 
       {/* Team Section */}
-      <section id="team" className="py-20 bg-white">
+      <section id="team" className="py-20 bg-transparent">
         <div className="container mx-auto px-4">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -155,7 +154,7 @@ const Index = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: false }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="bg-white p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all"
+                className="bg-white/80 backdrop-blur-sm p-8 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-all"
               >
                 <img 
                   src={member.image} 
