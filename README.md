@@ -6,7 +6,7 @@ Taxonomist is a machine learning-powered web application that helps policymakers
 
 **Disclaimer:** Since the dataset/features are still extending we have only depicted part of the solution and the idea . This is an long term project idea and in working. Thus, this isnt the final output 
 ## 🚀 Live Prototype  
-https://taxonomist.vercel.app/
+[https://taxonomist.vercel.app/]
 
 ---
 
