@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { ArrowLeft, Calculator } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
 
 const GDPCalculator = () => {
   const navigate = useNavigate();
@@ -15,6 +16,7 @@ const GDPCalculator = () => {
     m2: "",
     federalDebt: ""
   });
+  const [gdpResult, setGdpResult] = useState<number | null>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -25,8 +27,19 @@ const GDPCalculator = () => {
   };
 
   const handleCalculate = () => {
-    // TODO: Implement GDP calculation logic
-    console.log("Calculating GDP with:", formData);
+    // Basic placeholder calculation
+    const consumption = parseFloat(formData.personalConsumption) || 0;
+    const govSpending = parseFloat(formData.federalExpenditure) || 0;
+    const unemployment = parseFloat(formData.unemploymentRate) || 0;
+    const m1Value = parseFloat(formData.m1) || 0;
+    const m2Value = parseFloat(formData.m2) || 0;
+    const debt = parseFloat(formData.federalDebt) || 0;
+
+    // Simple placeholder formula (you can modify this later)
+    const gdp = (consumption + govSpending) * (1 - unemployment/100) + (m2Value - m1Value) - (debt * 0.1);
+    
+    setGdpResult(parseFloat(gdp.toFixed(2)));
+    toast.success("GDP calculation completed!");
   };
 
   return (
@@ -80,6 +93,13 @@ const GDPCalculator = () => {
             <Calculator className="mr-2 h-4 w-4" />
             Calculate GDP
           </Button>
+
+          {gdpResult !== null && (
+            <div className="mt-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">Calculated GDP</h3>
+              <p className="text-2xl font-bold text-[#89964e]">${gdpResult.toLocaleString()} Billion</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
