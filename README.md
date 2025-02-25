@@ -49,9 +49,13 @@ The app should now be running at localhost.
 
 ---
 ## Frontend Preview:
-![image](https://github.com/user-attachments/assets/fc1bfd24-d6ce-4bd7-bf0a-50ff51b797ce)
+![image](https://github.com/user-attachments/assets/26462f13-539c-45ab-865a-5f6685792d33)
 
-![image](https://github.com/user-attachments/assets/e7f9a2b9-2d16-475a-a809-cced0a37c608)
+
+![image](https://github.com/user-attachments/assets/131cbe42-a835-4bfa-82fe-df959c289bc2)
+
+
+![image](https://github.com/user-attachments/assets/20f70e82-211a-40fd-a2a4-c5d3e9241e50)
 
 
 
